@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+:root {
+  --base: #f1f1f1;
+  --text: #333;
+  --icon: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
 body {
-    background: red;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  background-color: var(--base);
+}
+
+header {
+  display: flex;
+  position: fixed;
+  width: 100vw;
 }
