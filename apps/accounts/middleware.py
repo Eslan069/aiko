@@ -8,8 +8,8 @@ class ContadorAcessosMiddleware(MiddlewareMixin):
         user = request.user if request.user.is_authenticated else None
         today = date.today()
 
-        if not DailyAccess.objects.filter(data=today, usuario=user, ip_address=ip).exists():
-            DailyAccess.objects.create(usuario=user, ip_address=ip, data=today)
+        if not DailyAccess.objects.filter(data=today, username=user, ip_address=ip).exists():
+            DailyAccess.objects.create(username=user, ip_address=ip, data=today)
 
     def get_client_ip(self, request):
         """ Obtém o IP real do usuário, mesmo atrás de proxies. """
